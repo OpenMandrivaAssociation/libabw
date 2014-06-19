@@ -1,12 +1,12 @@
-%define apiversion 0.0
-%define soversion 0
+%define apiversion 0.1
+%define soversion 1
 
 %define lib %mklibname abw %{apiversion} %{soversion}
 %define devel %mklibname -d abw
 
 Name: libabw
-Version: 0.0.1
-Release: 2
+Version: 0.1.0
+Release: 1
 Summary: A library for import of AbiWord files
 
 Group: System/Libraries
@@ -17,9 +17,11 @@ Source0: http://dev-www.libreoffice.org/src/%{name}-%{version}.tar.xz
 BuildRequires: boost-devel
 BuildRequires: doxygen
 BuildRequires: gperf
-BuildRequires: pkgconfig(libwpd-0.9)
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(zlib)
+BuildRequires: pkgconfig(librevenge-0.0)
+BuildRequires: pkgconfig(librevenge-generators-0.0)
+BuildRequires: pkgconfig(librevenge-stream-0.0)
 
 %description
 %{name} is a library for import of AbiWord files.
