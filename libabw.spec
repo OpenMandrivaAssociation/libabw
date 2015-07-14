@@ -5,8 +5,8 @@
 %define devel %mklibname -d abw
 
 Name: libabw
-Version: 0.1.0
-Release: 3
+Version: 0.1.1
+Release: 1
 Summary: A library for import of AbiWord files
 
 Group: System/Libraries
