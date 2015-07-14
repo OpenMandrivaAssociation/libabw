@@ -31,7 +31,8 @@ Summary: %{summary}
 Group: System/Libraries
 
 %description -n %{lib}
-%{description}
+Libabw is a library for import of AbiWord files. You can find it
+being used in libreoffice.
 
 %package -n %{devel}
 Summary: Development files for %{name}
