@@ -6,7 +6,7 @@
 
 Name: libabw
 Version: 0.1.1
-Release: 3
+Release: 4
 Summary: A library for import of AbiWord files
 
 Group: System/Libraries
