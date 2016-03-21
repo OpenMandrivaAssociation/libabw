@@ -1,3 +1,4 @@
+%define _disable_lto 1
 %define apiversion 0.1
 %define soversion 1
 
@@ -72,16 +73,13 @@ sed -i \
     -e 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' \
     -e 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' \
     libtool
-make %{?_smp_mflags}
+
+%make
 
 %install
 make install DESTDIR=%{buildroot}
 # we install API docs directly from build
 rm -rf %{buildroot}/%{_docdir}/%{name}
-
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
 
 %files -n %{devel}
 %doc ChangeLog
