@@ -12,7 +12,7 @@ Summary: A library for import of AbiWord files
 
 Group: System/Libraries
 License: MPLv2.0
-URL: http://www.freedesktop.org/wiki/Software/libabw/
+URL: https://www.freedesktop.org/wiki/Software/libabw/
 Source0: http://dev-www.libreoffice.org/src/libabw/%{name}-%{version}.tar.xz
 
 BuildRequires: boost-devel
