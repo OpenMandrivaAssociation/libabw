@@ -15,6 +15,11 @@ License: MPLv2.0
 URL: https://www.freedesktop.org/wiki/Software/libabw/
 Source0: http://dev-www.libreoffice.org/src/libabw/%{name}-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: boost-devel
 BuildRequires: doxygen
 BuildRequires: gperf
