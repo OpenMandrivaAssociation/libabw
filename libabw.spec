@@ -74,15 +74,18 @@ autoconf
 
 %build
 %configure --disable-silent-rules --disable-static --disable-werror
+# slibtool writes slibtool.cfg, not a GNU libtool script.
+if [ -f libtool ]; then
 sed -i \
     -e 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' \
     -e 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' \
     libtool
+fi
 
-%make
+%make LIBTOOL=slibtool-shared
 
 %install
-make install DESTDIR=%{buildroot}
+make install DESTDIR=%{buildroot} LIBTOOL=slibtool-shared
 # we install API docs directly from build
 rm -rf %{buildroot}/%{_docdir}/%{name}
 
